@@ -22,7 +22,7 @@ FITBIT_CLIENT_SECRET = os.environ.get('FITBIT_CLIENT_SECRET')
 FITBIT_ACCESS_TOKEN = os.environ.get('FITBIT_ACCESS_TOKEN')
 FITBIT_REFRESH_TOKEN = os.environ.get('FITBIT_REFRESH_TOKEN')
 
-LOCAL_TIMEZONE = tz.gettz('Australia/Sydney')
+LOCAL_TIMEZONE = tz.gettz('Norway/Oslo')
 
 hcv = herokuconfigvars.HerokuConfigVars(HEROKU_APP_ID, HEROKU_API_KEY)
 google_client = googlefit.GoogleFit(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, access_token=GOOGLE_ACCESS_TOKEN, refresh_token=GOOGLE_REFRESH_TOKEN)
