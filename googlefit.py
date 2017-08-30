@@ -23,7 +23,7 @@ class GoogleFit():
 		self.client_secret = client_secret
 		self.access_token = access_token
 		self.refresh_token = refresh_token
-		self.credentials = GoogleCredentials(access_token, client_id, client_secret, refresh_token, None, GOOGLE_TOKEN_URI, 'googlefit2fitbit', None)
+		self.credentials = GoogleCredentials(access_token, client_id, client_secret, refresh_token, None, GOOGLE_TOKEN_URI, 'ErlendFit', None)
 		self.http = httplib2.Http()
 		self.http = self.credentials.authorize(self.http)
 
