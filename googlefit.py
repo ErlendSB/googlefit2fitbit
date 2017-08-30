@@ -42,7 +42,7 @@ class GoogleFit():
 		for bucket in buckets:
 			for dataset in bucket['dataset']:
 				if 'point' in dataset:
-					if len(dataset['point']) > 0
+					if len(dataset['point']) > 0:
 						point = dataset['point'][0]
 
 						duration_millis = (int(point['endTimeNanos']) - int(point['startTimeNanos'])) / 1000000
