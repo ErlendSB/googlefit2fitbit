@@ -42,16 +42,17 @@ class GoogleFit():
 		for bucket in buckets:
 			for dataset in bucket['dataset']:
 				if 'point' in dataset:
-					point = dataset['point'][0]
+					if len(dataset['point']) > 0
+						point = dataset['point'][0]
 
-					duration_millis = (int(point['endTimeNanos']) - int(point['startTimeNanos'])) / 1000000
-					start_datetime = datetime.utcfromtimestamp(int(point['startTimeNanos']) / 1000000000)
-					start_datetime = start_datetime.replace(tzinfo=UTC).astimezone(local_timezone)
-					
-					start_time = start_datetime.strftime('%H:%M:%S')
-					start_date = start_datetime.strftime('%Y-%m-%d')
-					distance = point['value'][0]['intVal']
+						duration_millis = (int(point['endTimeNanos']) - int(point['startTimeNanos'])) / 1000000
+						start_datetime = datetime.utcfromtimestamp(int(point['startTimeNanos']) / 1000000000)
+						start_datetime = start_datetime.replace(tzinfo=UTC).astimezone(local_timezone)
 
-					step_data = StepData(start_time, start_date, int(duration_millis), distance)
-					step_points.append(step_data)
+						start_time = start_datetime.strftime('%H:%M:%S')
+						start_date = start_datetime.strftime('%Y-%m-%d')
+						distance = point['value'][0]['intVal']
+
+						step_data = StepData(start_time, start_date, int(duration_millis), distance)
+						step_points.append(step_data)
 		return step_points
