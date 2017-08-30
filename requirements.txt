@@ -1,4 +1,4 @@
-fitbit
+fitbit==0.2.2
 google-api-python-client
 httplib2
 datetime
