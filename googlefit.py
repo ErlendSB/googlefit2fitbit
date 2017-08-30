@@ -36,7 +36,7 @@ class GoogleFit():
 
 	def get_steps(self, start_timestamp, end_timestamp, local_timezone):
 		print(start_timestamp)
-		print(end_timestap)
+		print(end_timestamp)
 		buckets = self.get_buckets(start_timestamp, end_timestamp)
 		step_points = []
 		for bucket in buckets:
