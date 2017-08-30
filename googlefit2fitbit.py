@@ -28,7 +28,7 @@ hcv = herokuconfigvars.HerokuConfigVars(HEROKU_APP_ID, HEROKU_API_KEY)
 google_client = googlefit.GoogleFit(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, access_token=GOOGLE_ACCESS_TOKEN, refresh_token=GOOGLE_REFRESH_TOKEN)
 fitbit_client = fitbit.Fitbit(FITBIT_CLIENT_ID, FITBIT_CLIENT_SECRET, access_token=FITBIT_ACCESS_TOKEN, refresh_token=FITBIT_REFRESH_TOKEN)
 fitbit_client.client.refresh_token()
-print(fitbit_client.client)
+print(fitbit_client.client.token)
 hcv.set_config_var('FITBIT_ACCESS_TOKEN', fitbit_client.client.token['access_token'])
 hcv.set_config_var('FITBIT_REFRESH_TOKEN', fitbit_client.client.token['refresh_token'])
 
